@@ -5,6 +5,7 @@ import fs from "fs/promises";
 const app = express();
 const port = 5003;
 app.use(cors());
+app.use(express.json());
 
 app.get("/users", async (request, response) => {
   const data = await fs.readFile("users.json");
