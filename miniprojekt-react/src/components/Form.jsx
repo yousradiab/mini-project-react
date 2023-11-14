@@ -31,16 +31,16 @@ export default function Form() {
       <h2>Form coming soon?</h2>
       <form onSubmit={handleSubmit}>
         <label>
-            <br></br>
+          <br></br>
           Navn: <input></input>
           <br></br>
           <br></br>
           Brugernavn: <input></input>
-            <br></br>
-            <br></br>
+          <br></br>
+          <br></br>
           Email: <input></input>
-            <br></br>
-            <br></br>
+          <br></br>
+          <br></br>
           Alder: <input></input>
           <button>Submit</button>
         </label>

@@ -1,10 +1,10 @@
-import Table from "../components/Table.jsx"
+import Users from "../components/Users.jsx";
 
 export default function UserDataPage() {
-    return (
-       <>
-         <h1>User Data</h1>
-            <Table />
-       </>
-    )
+  return (
+    <>
+      <h1>User Data</h1>
+      <Users />
+    </>
+  );
 }

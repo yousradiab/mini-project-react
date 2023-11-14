@@ -1,7 +1,8 @@
 import "../main.css";
 import "../index.css";
 
-export default function Table({data}) {
+export default function Table({ data }) {
+  console.log(data);
   return (
     <div>
       <table>
@@ -15,15 +16,15 @@ export default function Table({data}) {
           </tr>
         </thead>
         <tbody>
-            {data.map((user) => (
-                <tr key={user.id}>
-                    <td>{user.id}</td>
-                    <td>{user.name}</td>
-                    <td>{user.username}</td>
-                    <td>{user.mail}</td>
-                    <td>{user.age}</td>
-                </tr>
-            ))}
+          {data.map((user) => (
+            <tr key={user.id}>
+              <td>{user.id}</td>
+              <td>{user.name}</td>
+              <td>{user.username}</td>
+              <td>{user.mail}</td>
+              <td>{user.age}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
