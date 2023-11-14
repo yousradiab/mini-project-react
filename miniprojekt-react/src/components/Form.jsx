@@ -1,46 +1,50 @@
-import {useState} from 'react';
+import { useState } from "react";
 
 export default function Form() {
-    const [name, setName] = useState("");
-    const [username, setUsername] = useState("");
-    const [email, setEmail] = useState("");
-    const [age, setAge] = useState("");
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [age, setAge] = useState("");
 
-    const handleSubmit =  async (e) => {    
-        e.preventDefault();
-        const user = {name, username, email, age};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const user = { name, username, email, age };
 
-        resetForm();
-        
-            await fetch("http://localhost:5003/users", {
-                method: "POST",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(user)
+    resetForm();
 
-            });
-        
-        };
+    await fetch("http://localhost:5003/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user),
+    });
+  };
 
-    function resetForm() {
-        setName("");
-        setUsername("");
-        setEmail("");
-        setAge("");
-    }
+  function resetForm() {
+    setName("");
+    setUsername("");
+    setEmail("");
+    setAge("");
+  }
 
-
-    return(
-        <>
-        <h2>Form coming soon?</h2>
-        <form onSubmit={handleSubmit}>
-            <label>
-            Navn:<input>
-            </input>
-            </label>
-        </form>
-        </>
-        
-    )
+  return (
+    <>
+      <h2>Form coming soon?</h2>
+      <form onSubmit={handleSubmit}>
+        <label>
+            <br></br>
+          Navn: <input></input>
+          <br></br>
+          <br></br>
+          Brugernavn: <input></input>
+            <br></br>
+            <br></br>
+          Email: <input></input>
+            <br></br>
+            <br></br>
+          Alder: <input></input>
+          <button>Submit</button>
+        </label>
+      </form>
+    </>
+  );
 }
-
-
