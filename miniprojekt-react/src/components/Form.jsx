@@ -32,16 +32,16 @@ export default function Form() {
       <form onSubmit={handleSubmit}>
         <label>
           <br></br>
-          Navn: <input></input>
+          Navn: <input value={name} onChange={(e) => setName(e.target.value)}></input>
           <br></br>
           <br></br>
-          Brugernavn: <input></input>
+          Brugernavn: <input value={username} onChange={(e) => setUsername(e.target.value)}></input>
           <br></br>
           <br></br>
-          Email: <input></input>
+          Email: <input value={email} onChange={(e) => setEmail(e.target.value)}></input>
           <br></br>
           <br></br>
-          Alder: <input></input>
+          Alder: <input value={age} onChange={(e) => setAge(e.target.value)}></input>
           <button>Submit</button>
         </label>
       </form>
