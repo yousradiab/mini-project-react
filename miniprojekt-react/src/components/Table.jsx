@@ -21,7 +21,7 @@ export default function Table({ data }) {
               <td>{user.id}</td>
               <td>{user.name}</td>
               <td>{user.username}</td>
-              <td>{user.mail}</td>
+              <td>{user.email}</td>
               <td>{user.age}</td>
             </tr>
           ))}
