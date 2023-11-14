@@ -27,24 +27,21 @@ export default function Form() {
   }
 
   return (
-    <>
-      <h2>Form coming soon?</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <br></br>
-          Navn: <input value={name} onChange={(e) => setName(e.target.value)}></input>
-          <br></br>
-          <br></br>
-          Brugernavn: <input value={username} onChange={(e) => setUsername(e.target.value)}></input>
-          <br></br>
-          <br></br>
-          Email: <input value={email} onChange={(e) => setEmail(e.target.value)}></input>
-          <br></br>
-          <br></br>
-          Alder: <input value={age} onChange={(e) => setAge(e.target.value)}></input>
-          <button>Submit</button>
-        </label>
-      </form>
-    </>
+    <form onSubmit={handleSubmit}>
+      <label>
+        <br></br>
+        Navn: <input value={name} onChange={(e) => setName(e.target.value)}></input>
+        <br></br>
+        <br></br>
+        Brugernavn: <input value={username} onChange={(e) => setUsername(e.target.value)}></input>
+        <br></br>
+        <br></br>
+        Email: <input value={email} onChange={(e) => setEmail(e.target.value)}></input>
+        <br></br>
+        <br></br>
+        Alder: <input value={age} onChange={(e) => setAge(e.target.value)}></input>
+        <button>Submit</button>
+      </label>
+    </form>
   );
 }
